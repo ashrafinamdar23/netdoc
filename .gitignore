@@ -1,0 +1,14 @@
+# Go
+/bin/
+*.exe
+*.out
+*.test
+
+# DB / runtime
+*.db
+*.db-journal
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
