@@ -1,0 +1,19 @@
+app:
+  name: netdoc
+
+logging:
+  level: info          # debug|info|warn|error
+  format: json         # json|text
+  output: stdout       # stdout|file
+  file: ""             # when output=file
+  module_levels:
+    # example overrides (optional)
+    # "connector.prometheus": debug
+    # "report": info
+    # "engine": info
+
+  # runtime filters (later we can populate from DB too)
+  filters:
+    run_id: ""         # if set, only logs matching run_id
+    item_id: 0         # if set (>0), only logs matching item_id
+    system_id: 0       # if set (>0), only logs matching system_id
