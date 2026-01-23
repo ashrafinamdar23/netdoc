@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"flag"
 	"os"
 
 	"github.com/ashrafinamdar23/netdoc/internal/config"
@@ -9,9 +10,11 @@ import (
 )
 
 func main() {
-	cfg, err := config.Load("./config.yaml")
+	configPath := flag.String("config", "./config.yaml", "path to config.yaml")
+	flag.Parse()
+
+	cfg, err := config.Load(*configPath)
 	if err != nil {
-		// fallback minimal
 		panic(err)
 	}
 
